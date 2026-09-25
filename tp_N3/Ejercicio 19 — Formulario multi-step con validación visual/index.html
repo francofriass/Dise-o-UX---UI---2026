@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio_19</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form class="formulario-pasos">
+    <input type="radio" name="pasos" id="paso1" class="radio-oculto" checked>
+    <input type="radio" name="pasos" id="paso2" class="radio-oculto">
+
+    <div class="seccion-paso" id="seccion1">
+        <h3>Paso 1: Datos Personales</h3>
+        <input type="text" placeholder="Tu Nombre" required>
+        
+        <label for="paso2" class="boton-siguiente">Siguiente </label>
+    </div>
+
+    <div class="seccion-paso" id="seccion2">
+        <h3>Paso 2: Cuenta</h3>
+        <input type="email" placeholder="Tu Correo" required>
+        
+        <label for="paso1" class="boton-atras"> Atrás</label>
+        
+        <button type="submit">Enviar</button>
+    </div>
+
+</form>
+</body>
+</html>

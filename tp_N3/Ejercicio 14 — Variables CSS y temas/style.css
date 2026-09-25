@@ -1,0 +1,37 @@
+
+:root {
+  --color-fondo: #ffffff;
+  --color-texto: #333333;
+  --color-primario: #007BFF;
+  --espaciado: 20px;
+  --bordes: 8px;
+}
+
+.tema-oscuro {
+  --color-fondo: #1a1a1a;
+  --color-texto: #f0f0f0;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  padding: var(--espaciado);
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.tarjeta {
+    background-color: var(--color-primario);
+    color: white;
+    padding: var(--espaciado);
+    border-radius: var(--bordes);
+    margin-bottom: var(--espaciado);
+  
+}
+
+button {
+  background-color: var(--color-primario);  
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}

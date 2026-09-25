@@ -1,0 +1,47 @@
+
+.radio-oculto {
+    display: none;
+}
+
+.seccion-paso {
+    display: none;
+}
+
+#paso1:checked ~ #seccion1 {
+    display: block;
+}
+
+#paso2:checked ~ #seccion2 {
+    display: block;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none; 
+    margin-bottom: 15px;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+input:valid {
+    border-color: #28a745;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+.boton-siguiente, .boton-atras {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-siguiente:hover, .boton-atras:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio_20</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo"> Gelihelato</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#sabores">Sabores</a></li>
+                <li><a href="#testimonios">Reseñas</a></li>
+                <li><a href="#contacto">Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-contenido">
+                <h1>sabores artesanales</h1>
+                <p>Elaborados en el día con ingredientes frescos y mucho amor.</p>
+                <a href="#contacto" class="btn-primario">reservar pedido</a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SERVICIOS/PRODUCTOS (GRID) -->
+        <section id="sabores" class="sabores">
+            <h2>Nuestros Clásicos</h2>
+            <div class="grid-sabores">
+                <div class="card-sabor">
+                    <h3>vainilla</h3>
+                    <p>vainilla intenso y un sabor cremoso.</p>
+                </div>
+                <div class="card-sabor">
+                    <h3>dulce de leche</h3>
+                    <p>Crema suave, fresca y un sabor clasico.</p>
+                </div>
+                <div class="card-sabor">
+                    <h3>chocolate</h3>
+                    <p>sabor clasico, amargo con el mejor chocolate de marca.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonios" class="testimonios">
+            <h2>comentarios:</h2>
+            <div class="carrusel-snap">
+                <div class="testimonio-item">
+                    <p>"el mejor chocolate que probé en mi vida. Totalmente adictivo."</p>
+                    <span>- Franco.</span>
+                </div>
+                <div class="testimonio-item">
+                    <p>"Llega rapidísimo el delivery y el helado mantiene la textura perfecta."</p>
+                    <span>- Ernesto L</span>
+                </div>
+                <div class="testimonio-item">
+                    <p>"Los sabores como la vainilla son increíbles, se nota que son artesanales."</p>
+                    <span>- naranjo123.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2>Hacé tu pedido</h2>
+            <form class="formulario-contacto">
+                <label for="nombre">Nombre y Apellido</label>
+                <input type="text" id="nombre" required>
+
+                <label for="direccion">Dirección de entrega</label>
+                <input type="text" id="direccion" required>
+
+                <label for="pedido">¿Qué te preparamos? (Sabores y tamaño)</label>
+                <textarea id="pedido" rows="4" required></textarea>
+
+                <button type="submit" class="btn-primario">Enviar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Heladería Gelihelato. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+.galeria {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+}
+
+.tarjeta_producto {
+    flex-basis: 250px;
+    flex-grow: 1;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+}

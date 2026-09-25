@@ -1,0 +1,11 @@
+
+.barra_navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Links {
+    display: flex;
+    gap: 20px;
+}

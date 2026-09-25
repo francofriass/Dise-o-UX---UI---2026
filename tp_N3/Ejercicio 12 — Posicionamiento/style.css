@@ -1,0 +1,31 @@
+
+button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.etiqueta {
+    position: relative;
+    margin: 50px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 150%;
+    left: 0;
+    z-index: 50;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.etiqueta:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}

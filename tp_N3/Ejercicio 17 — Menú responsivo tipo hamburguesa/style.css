@@ -1,0 +1,15 @@
+
+.hamburguesa-oculta {
+  display: none;
+}
+
+.menu-desplegable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+#hamburguesa:checked ~ .menu-desplegable {
+  max-height: 500px;
+}
+

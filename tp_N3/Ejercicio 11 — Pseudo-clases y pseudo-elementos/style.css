@@ -1,0 +1,20 @@
+
+.lista a {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.lista a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.lista li:nth-child(3) a {
+  background-color: #ffc527;
+}
+
+.lista a::before {
+  content: "→ ";
+  color: #007BFF;
+}
