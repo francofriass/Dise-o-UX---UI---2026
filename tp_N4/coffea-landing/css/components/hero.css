@@ -104,7 +104,7 @@
 
   .hero__content,
   .hero__copy {
-    gap: var(--space-14);
+    gap: var(--space-13.5);
   }
 
   .hero__heading {
