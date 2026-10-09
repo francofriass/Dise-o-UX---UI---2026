@@ -1,0 +1,126 @@
+.footer {
+  padding-block: var(--space-10);
+  background-color: var(--color-espresso);
+  color: var(--color-white);
+}
+
+.footer :focus-visible {
+  outline-color: var(--color-white);
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-10) var(--space-6);
+}
+
+.footer__brand {
+  grid-column: 1 / -1;
+}
+
+.footer__logo {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.footer__logo-initial {
+  font-size: 2.25rem;
+}
+
+.footer__heading {
+  margin-block-end: var(--space-6);
+  font-family: var(--font-display);
+  font-size: var(--fs-footer-h);
+  font-weight: 500;
+  line-height: 1.33;
+  text-transform: uppercase;
+}
+
+.footer__heading--social {
+  font-weight: 700;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-15);
+}
+
+.footer__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-family: var(--font-ui);
+  font-size: var(--fs-md);
+  line-height: 1.5;
+}
+
+.footer__list .footer__link {
+  min-height: 0;
+}
+
+.footer__social {
+  display: flex;
+}
+
+.footer__social-link {
+  display: grid;
+  place-items: center;
+  width: var(--touch-target);
+  height: var(--touch-target);
+}
+
+.footer__social-link img {
+  width: var(--size-social);
+  height: var(--size-social);
+}
+
+@media (hover: hover) {
+  .footer__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+
+  .footer__social-link:hover img {
+    opacity: 0.7;
+  }
+}
+
+@media (min-width: 48rem) {
+  .footer__inner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__brand {
+    grid-column: auto;
+  }
+}
+
+@media (min-width: 64rem) {
+  .footer {
+    padding-block: var(--space-24);
+  }
+
+  .footer__inner {
+    grid-template-columns: auto repeat(4, auto) auto;
+    column-gap: var(--space-2);
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .footer__brand {
+    align-self: start;
+    margin-block-start: calc(-1 * var(--space-15));
+  }
+}
+
+@media (min-width: 90rem) {
+  .footer__inner {
+    grid-template-columns: 221fr 239fr 230fr 247fr 332fr 176fr;
+    justify-content: stretch;
+  }
+}

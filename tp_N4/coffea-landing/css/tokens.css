@@ -1,0 +1,115 @@
+@layer tokens, base, layout, components, utilities;
+
+@layer tokens {
+  :root {
+    /* Colors */
+    --color-espresso: #30261c;
+    --color-maroon: #2a0000;
+    --color-sand: #e2d9c8;
+    --color-sand-20: rgb(226 217 200 / 0.2);
+    --color-sand-40: rgb(226 217 200 / 0.4);
+    --color-bg: #f1f0ee;
+    --color-muted: #544a3e;
+    --color-border-soft: rgb(48 38 28 / 0.1);
+    --color-text-soft: rgb(48 38 28 / 0.7);
+    --color-white: #fff;
+    --color-black: #000;
+    --color-star: #ffb921;
+    --color-star-empty: #cecece;
+    --color-error: #b3261e;
+    --color-overlay: rgb(0 0 0 / 0.55);
+    --color-overlay-soft: rgb(0 0 0 / 0.45);
+    --color-placeholder: #1c1510;
+
+    /* Typography */
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-body: "Outfit", system-ui, sans-serif;
+    --font-ui: "Poppins", system-ui, sans-serif;
+    --font-accent: "Reggae One", "Playfair Display", serif;
+
+    --fs-hero: clamp(2.5rem, 1.5rem + 3.5vw, 4.5rem);
+    --fs-h2: clamp(1.5rem, 1.1rem + 1.4vw, 2rem);
+    --fs-cta: clamp(1.75rem, 1.2rem + 1.8vw, 2.5rem);
+    --fs-card-title: 2.375rem;
+    --fs-logo: 2rem;
+    --fs-footer-h: 1.5rem;
+    --fs-lg: 1.25rem;
+    --fs-md: 1.125rem;
+    --fs-base: 1rem;
+    --fs-sm: 0.875rem;
+    --fs-xs: 0.75rem;
+
+    --lh-hero: 1.139;
+    --lh-cta: 1.25;
+    --lh-title: 1.26;
+    --lh-body: 1.44;
+    --lh-card: 1.4;
+    --lh-xs: 1.667;
+    --tracking-h2: 0.08rem;
+    --tracking-eyebrow: 0.25rem;
+
+    /* Shape */
+    --radius-pill: 100px;
+    --radius-card: 18px;
+    --radius-img: 12px;
+    --radius-btn: 8px;
+    --radius-round: 50%;
+    --border-w-card: 1.5px;
+    --border-w-thick: 2px;
+    --container: 90.25rem;
+
+    /* Space (4 · 8 · 12 · 16 · 24 · 28 · 40 · 56 and layout extras) */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-2-5: 0.625rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-4-5: 1.125rem;
+    --space-6: 1.5rem;
+    --space-7: 1.75rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-14: 3.5rem;
+    --space-15: 0.9375rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-22: 5.5rem;
+    --space-24: 6rem;
+
+    /* Components */
+    --touch-target: 2.75rem;
+    --size-search: 2.75rem;
+    --size-icon-cat: 5.125rem;
+    --size-heart: 2.0625rem;
+    --size-arrow: 4.4375rem;
+    --size-avatar: 3.5rem;
+    --size-star: 1.5rem;
+    --size-social: 1.5rem;
+    --size-dot: 0.75rem;
+    --shadow-card: 0 0.75rem 1.5rem rgb(48 38 28 / 0.15);
+    --transition: 200ms ease;
+
+    --gutter: var(--space-4);
+  }
+
+  @media (min-width: 48rem) {
+    :root {
+      --gutter: var(--space-8);
+      --size-search: 2.75rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    :root {
+      --gutter: 3rem;
+      --size-search: 3.8125rem;
+      --size-arrow: 3rem;
+    }
+  }
+
+  @media (min-width: 90rem) {
+    :root {
+      --size-arrow: 4.4375rem;
+    }
+  }
+}

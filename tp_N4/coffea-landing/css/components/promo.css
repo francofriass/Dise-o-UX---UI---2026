@@ -1,0 +1,97 @@
+.promo {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  min-height: 20.9375rem;
+  padding-block: var(--space-10);
+}
+
+.promo__img {
+  display: none;
+  position: absolute;
+  inset-block: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+}
+
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  padding-inline: var(--gutter);
+  text-align: center;
+}
+
+.promo__title {
+  max-width: 23.25rem;
+  color: var(--color-black);
+  font-family: var(--font-display);
+  font-size: var(--fs-cta);
+  font-weight: 600;
+  line-height: var(--lh-cta);
+}
+
+.promo__cta {
+  min-width: 16.125rem;
+  min-height: 3.1875rem;
+  padding: var(--space-4) calc(var(--space-7) + var(--space-2));
+  background-color: var(--color-espresso);
+  color: var(--color-bg);
+  font-size: var(--fs-base);
+  line-height: 1.25;
+}
+
+.promo__chevrons {
+  display: flex;
+}
+
+.promo__chevrons img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.promo__chevrons img + img {
+  margin-inline-start: -0.75rem;
+}
+
+@media (hover: hover) {
+  .promo__cta:hover {
+    background-color: var(--color-maroon);
+  }
+}
+
+@media (min-width: 48rem) {
+  .promo {
+    grid-template-columns: clamp(12rem, 27vw, 32.5rem) 1fr;
+    padding-block: 0;
+    height: 20.9375rem;
+  }
+
+  .promo__img--hand {
+    display: block;
+    inset-inline-start: 0;
+    width: clamp(12rem, 27vw, 32.5rem);
+  }
+
+  .promo__content {
+    grid-column: 2;
+    align-items: flex-start;
+    padding-inline: clamp(1rem, 4.6vw, 5.5rem) var(--gutter);
+    text-align: start;
+  }
+}
+
+@media (min-width: 64rem) {
+  .promo {
+    grid-template-columns: clamp(12rem, 27vw, 32.5rem) 1fr clamp(12rem, 26.2vw, 31.4375rem);
+  }
+
+  .promo__img--beans {
+    display: block;
+    inset-inline-end: 0;
+    width: clamp(12rem, 26.2vw, 31.4375rem);
+  }
+}

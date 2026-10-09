@@ -1,0 +1,15 @@
+@layer tokens, base, layout, components, utilities;
+
+@import url("tokens.css?v=1");
+@import url("base.css?v=1") layer(base);
+@import url("layout.css?v=1") layer(layout);
+@import url("components/header.css?v=1") layer(components);
+@import url("components/hero.css?v=1") layer(components);
+@import url("components/categories.css?v=1") layer(components);
+@import url("components/product-card.css?v=1") layer(components);
+@import url("components/carousel.css?v=1") layer(components);
+@import url("components/promo.css?v=1") layer(components);
+@import url("components/testimonial-card.css?v=1") layer(components);
+@import url("components/newsletter.css?v=1") layer(components);
+@import url("components/footer.css?v=1") layer(components);
+@import url("utilities.css?v=1") layer(utilities);

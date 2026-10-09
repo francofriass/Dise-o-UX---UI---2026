@@ -1,0 +1,111 @@
+.newsletter {
+  padding-block: var(--space-10);
+  color: var(--color-espresso);
+  font-family: var(--font-ui);
+  text-align: center;
+}
+
+.newsletter__img {
+  display: none;
+  position: absolute;
+  inset-block: 0;
+  z-index: -1;
+  width: min(30.125rem, (100% - 32.125rem) / 2);
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.newsletter__img--right {
+  inset-inline-end: 0;
+  transform: scaleX(-1);
+}
+
+.newsletter__img--left {
+  inset-inline-start: 0;
+}
+
+.newsletter__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.newsletter__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.newsletter__title {
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.newsletter__subtitle {
+  font-size: var(--fs-base);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: min(32.125rem, 100%);
+}
+
+.newsletter__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: var(--touch-target);
+  padding: var(--space-2-5) var(--space-6) var(--space-2-5) 3.625rem;
+  border: var(--border-w-thick) solid transparent;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg) url("../../assets/icons/mail.svg") var(--space-6) center / 1.5rem 1.5rem no-repeat;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.newsletter__input::placeholder {
+  color: var(--color-espresso);
+  opacity: 1;
+}
+
+.newsletter__input:user-invalid {
+  border-color: var(--color-error);
+}
+
+.newsletter__submit {
+  flex: none;
+  padding: var(--space-2-5) var(--space-7);
+  background-color: var(--color-espresso);
+  color: var(--color-bg);
+  font-size: var(--fs-base);
+  font-weight: 600;
+}
+
+@media (hover: hover) {
+  .newsletter__submit:hover {
+    background-color: var(--color-maroon);
+  }
+}
+
+@media (min-width: 48rem) {
+  .newsletter {
+    display: grid;
+    align-items: center;
+    height: 20rem;
+    padding-block: 0;
+  }
+
+  .newsletter__img {
+    display: block;
+  }
+
+  .newsletter__form {
+    flex-direction: row;
+  }
+}

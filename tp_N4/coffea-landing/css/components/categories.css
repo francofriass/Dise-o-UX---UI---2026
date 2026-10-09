@@ -1,0 +1,69 @@
+.categories {
+  padding-block: var(--space-10);
+}
+
+.categories__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  max-width: 52.8125rem;
+  margin-inline: auto;
+}
+
+.categories__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  color: var(--color-muted);
+  font-family: var(--font-ui);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  line-height: 1.78;
+  transition: color var(--transition);
+}
+
+/* Icon is a mask so its color follows `color` (hover, forced colors) */
+.categories__icon {
+  display: block;
+  width: var(--size-icon-cat);
+  height: var(--size-icon-cat);
+  background-color: currentcolor;
+  mask: var(--icon) center / contain no-repeat;
+}
+
+.categories__icon--hot {
+  --icon: url("../../assets/icons/cat-hot.svg");
+}
+
+.categories__icon--cold {
+  --icon: url("../../assets/icons/cat-cold.svg");
+}
+
+.categories__icon--cup {
+  --icon: url("../../assets/icons/cat-cup.svg");
+}
+
+.categories__icon--dessert {
+  --icon: url("../../assets/icons/cat-dessert.svg");
+}
+
+.categories__link:hover {
+  color: var(--color-espresso);
+}
+
+@media (min-width: 48rem) {
+  .categories {
+    padding-block: 0;
+    height: 13.75rem;
+    display: grid;
+    align-items: center;
+  }
+
+  .categories__list {
+    display: flex;
+    justify-content: space-between;
+    width: min(52.8125rem, 100%);
+  }
+}
