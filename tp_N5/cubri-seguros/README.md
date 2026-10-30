@@ -3,8 +3,8 @@
 Front-end de un checkout de seguros (Seguro de Celular) para el TP5 de **Diseño UXUI 2026 · FCyT**.
 El usuario elige un producto, cotiza, elige un plan, carga sus datos, paga (simulado) y recibe su número de póliza.
 
-> **Sitio publicado:** https://TU-SITIO.netlify.app  ← reemplazar por la URL de Netlify
-> **Repositorio:** https://github.com/TU_USUARIO/cubri-seguros  ← reemplazar por el link del repo
+> **Sitio publicado:** https://app.netlify.com/projects/cubri-seguros-franco/overview
+> **Repositorio:** https://github.com/francofriass/Dise-o-UX---UI---2026/tree/main/tp_N5/cubri-seguros
 
 ## Stack
 
@@ -138,4 +138,4 @@ Del Figma ("Mapeo de la UI a componentes shadcn/ui") a su equivalente sin React 
 - [x] La tarjeta 4000 0000 0000 0002 lleva al error y "Reintentar" vuelve al pago con todo cargado.
 - [x] La póliza tiene formato POL-AAAA-NNNNNN.
 - [x] Sin errores en la consola del navegador.
-- [ ] Sitio publicado y URL cargada arriba.
+- [x] Sitio publicado y URL cargada arriba.
