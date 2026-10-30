@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cubrí Seguros · Inicio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234F46E5'/%3E%3Cpath d='M16 7c2 1.6 4.4 2.4 6.6 2.4V16c0 4.4-3 7-6.6 8.4C12.4 23 9.4 20.400 9.400 16V9.400C11.600 9.400 14 8.600 16 7z' fill='none' stroke='white' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <!-- Tipografía: Inter (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <!-- Basecoat UI (estilos de componentes) -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/basecoat-css@1.1.0/dist/basecoat.cdn.min.css">
+  <!-- Tailwind v4 en el navegador (utilidades) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-pagina="catalogo" data-paso="0" class="min-h-screen pb-28 lg:pb-0">
+  <header class="border-b border-slate-200 bg-white">
+    <div class="mx-auto flex h-14 max-w-[1360px] items-center justify-between px-5 lg:h-16 lg:px-10">
+      <a href="catalogo.html" class="inline-flex items-center gap-2" aria-label="Cubrí Seguros — inicio"><span class="inline-flex size-8 items-center justify-center rounded-lg bg-indigo-600 text-white"><svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span><span class="text-[17px] font-extrabold tracking-tight text-indigo-800">Cubrí</span></a>
+      <!-- Menú superior: solo desktop -->
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Menú principal">
+        <a href="#" class="text-[14px] font-medium text-slate-500 hover:text-slate-900" data-sin-destino>Seguros</a>
+        <a href="#" class="text-[14px] font-medium text-slate-500 hover:text-slate-900" data-sin-destino>Siniestros</a>
+        <a href="#" class="text-[14px] font-medium text-slate-500 hover:text-slate-900" data-sin-destino>Ayuda</a>
+        <button type="button" class="btn" data-variant="cuenta" data-sin-destino>Mi cuenta</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto grid max-w-[1360px] gap-6 px-5 pt-6 lg:grid-cols-[minmax(0,1fr)_600px] lg:items-center lg:gap-16 lg:px-10 lg:pb-16 lg:pt-16">
+    <!-- Hero (izquierda en desktop) -->
+    <section>
+      <span class="mb-5 hidden w-fit rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-bold text-emerald-600 lg:inline-flex">Primer mes con 20% OFF</span>
+      <h1 class="t-h2 t-hero">Protegé lo que más usás en menos de 3 minutos</h1>
+      <p class="t-lead mt-3 lg:hidden">Elegí qué querés asegurar. Cotizás al instante y contratás 100% online.</p>
+      <p class="t-lead t-lead-lg hidden lg:block">Elegí qué querés asegurar, cotizá al instante y contratá 100% online. Sin papeles ni llamadas.</p>
+
+      <!-- CTA: barra fija abajo en mobile, botón en línea en desktop -->
+      <div class="acciones acciones--centrada acciones--hero">
+        <button type="button" class="btn btn-lg" data-accion="cotizar"><span class="lg:hidden">Cotizar seguro de Celular</span><span class="hidden lg:inline">Cotizar ahora</span></button>
+      </div>
+    </section>
+
+    <!-- Catálogo (derecha en desktop): grilla 2×2 -->
+    <section aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo" class="sr-only">Productos</h2>
+      <div class="grid grid-cols-2 gap-3 lg:gap-4">
+        <button type="button" class="producto" aria-pressed="true" data-producto="celular">
+              <span class="producto__icono"><svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span>
+              <span class="producto__nombre">Celular</span>
+              <span class="producto__detalle">Robo, rotura y pérdida</span>
+              <span class="producto__precio">desde $2.000/mes</span>
+            </button>
+        <button type="button" class="producto" disabled title="Próximamente">
+              <span class="producto__icono"><svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
+              <span class="producto__nombre">Hogar</span>
+              <span class="producto__detalle">Incendio y robo (proximamente)</span>
+              <span class="producto__precio">desde $5.500/mes</span>
+            </button>
+        <button type="button" class="producto" disabled title="Próximamente">
+              <span class="producto__icono"><svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg></span>
+              <span class="producto__nombre">Bicicleta</span>
+              <span class="producto__detalle">Robo total (proximamente)</span>
+              <span class="producto__precio">desde $1.800/mes</span>
+            </button>
+        <button type="button" class="producto" disabled title="Próximamente">
+              <span class="producto__icono"><svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span>
+              <span class="producto__nombre">Viaje</span>
+              <span class="producto__detalle">Asistencia al viajero (proximamente)</span>
+              <span class="producto__precio">desde $900/día</span>
+            </button>
+      </div>
+      <div class="panel mt-3 flex flex-row items-center gap-3 px-4 py-3 lg:hidden">
+        <span class="badge bg-emerald-50 text-[10px] font-extrabold uppercase tracking-wide text-emerald-600">Nuevo</span>
+        <p class="t-help text-[12px] text-slate-500">Primer mes con 20% OFF en todos los planes</p>
+      </div>
+    </section>
+
+    <!-- Beneficios: solo desktop, debajo del hero y la grilla -->
+    <section class="hidden gap-4 lg:col-span-2 lg:mt-8 lg:grid lg:grid-cols-3" aria-label="Beneficios">
+      <div class="panel px-5 py-4 !rounded-xl">
+        <h2 class="text-[13px] font-bold">100% online</h2>
+        <p class="t-help mt-1">Cotizás y contratás desde la web</p>
+      </div>
+      <div class="panel px-5 py-4 !rounded-xl">
+        <h2 class="text-[13px] font-bold">Póliza al instante</h2>
+        <p class="t-help mt-1">La recibís por email al confirmar</p>
+      </div>
+      <div class="panel px-5 py-4 !rounded-xl">
+        <h2 class="text-[13px] font-bold">Sin permanencia</h2>
+        <p class="t-help mt-1">Cancelás cuando quieras</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

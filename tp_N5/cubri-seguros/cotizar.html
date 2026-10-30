@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cubrí Seguros · Cotizar</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234F46E5'/%3E%3Cpath d='M16 7c2 1.6 4.4 2.4 6.6 2.4V16c0 4.4-3 7-6.6 8.4C12.4 23 9.4 20.400 9.400 16V9.400C11.600 9.400 14 8.600 16 7z' fill='none' stroke='white' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <!-- Tipografía: Inter (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <!-- Basecoat UI (estilos de componentes) -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/basecoat-css@1.1.0/dist/basecoat.cdn.min.css">
+  <!-- Tailwind v4 en el navegador (utilidades) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-pagina="cotizar" data-paso="1" class="min-h-screen pb-28 lg:pb-0">
+  <header class="sticky top-0 z-40 border-b border-slate-200 bg-white lg:static lg:border-0 lg:bg-transparent">
+    <div class="lg:border-b lg:border-slate-200 lg:bg-white">
+      <div class="mx-auto flex h-14 max-w-[1360px] items-center justify-between px-3 lg:h-16 lg:px-10">
+        <div class="flex items-center gap-1">
+          <button type="button" class="btn size-9 p-0 text-slate-900 lg:hidden" data-variant="ghost" data-accion="volver" aria-label="Volver">
+            <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <p class="text-[17px] font-semibold lg:hidden">Cotizá tu seguro</p>
+          <a href="catalogo.html" class="hidden items-center gap-2 lg:inline-flex" aria-label="Cubrí Seguros — inicio"><span class="inline-flex size-8 items-center justify-center rounded-lg bg-indigo-600 text-white"><svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span><span class="text-[17px] font-extrabold tracking-tight text-indigo-800">Cubrí</span></a>
+        </div>
+        <nav class="hidden items-center gap-8 lg:flex" aria-label="Menú principal">
+        <a href="#" class="text-[14px] font-medium text-slate-500 hover:text-slate-900" data-sin-destino>Seguros</a>
+        <a href="#" class="text-[14px] font-medium text-slate-500 hover:text-slate-900" data-sin-destino>Siniestros</a>
+        <a href="#" class="text-[14px] font-medium text-slate-500 hover:text-slate-900" data-sin-destino>Ayuda</a>
+        <button type="button" class="btn" data-variant="cuenta" data-sin-destino>Mi cuenta</button>
+      </nav>
+      </div>
+    </div>
+    <!-- Desktop: título de la pantalla sobre el stepper -->
+    <div class="mx-auto hidden max-w-[1360px] px-10 pt-8 lg:block">
+      <p class="eyebrow">Seguro de Celular</p>
+      <h1 class="t-titulo">Contanos sobre tu celular</h1>
+    </div>
+    <div class="mx-auto max-w-[1360px] px-5 pb-3 lg:px-10 lg:pb-0 lg:pt-5">
+      <nav id="stepper" aria-label="Progreso de la contratación" class="lg:rounded-xl lg:border lg:border-slate-200 lg:bg-white lg:px-5 lg:py-3"></nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-[1360px] px-5 pt-5 lg:px-10 lg:pb-16 lg:pt-6">
+    <div class="grid gap-6 lg:grid-cols-[1fr_380px] lg:items-start lg:gap-8">
+      <form id="form-cotizar" class="formulario-card card" novalidate>
+        <h1 class="t-h2 lg:hidden">Contanos sobre tu celular</h1>
+
+        <div class="grid gap-4 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-5">
+        <div role="group" class="field">
+          <label for="marca">Marca</label>
+          <select id="marca" name="marca" data-campo="equipo.marca" aria-describedby="marca-error">
+            <option value="">Seleccioná una marca</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Apple">Apple</option>
+            <option value="Motorola">Motorola</option>
+            <option value="Xiaomi">Xiaomi</option>
+          </select>
+          <p id="marca-error" role="alert" hidden></p>
+        </div>
+
+        <div role="group" class="field">
+          <label for="modelo">Modelo</label>
+          <input id="modelo" name="modelo" type="text" data-campo="equipo.modelo" aria-describedby="modelo-error" autocomplete="off" maxlength="60">
+          <p id="modelo-error" role="alert" hidden></p>
+        </div>
+
+        <div role="group" class="field">
+          <label for="valor">Valor del equipo</label>
+          <input id="valor" name="valor" type="text" data-campo="equipo.valor" aria-describedby="valor-error" inputmode="numeric" autocomplete="off">
+        <p class="t-help" data-ayuda>Entre $100.000 y $2.500.000</p>
+          <p id="valor-error" role="alert" hidden></p>
+        </div>
+
+        <div role="group" class="field" aria-labelledby="lbl-antiguedad">
+          <span id="lbl-antiguedad" class="t-label">Antigüedad</span>
+          <div class="chips" role="radiogroup" aria-labelledby="lbl-antiguedad">
+            <label class="chip"><input type="radio" name="antiguedad" value="menos-1" data-campo="equipo.antiguedad">Menos de 1 año</label>
+            <label class="chip"><input type="radio" name="antiguedad" value="1-2" data-campo="equipo.antiguedad">1 a 2 años</label>
+            <label class="chip"><input type="radio" name="antiguedad" value="mas-2" data-campo="equipo.antiguedad">+2 años</label>
+          </div>
+          <p id="antiguedad-error" role="alert" hidden></p>
+        </div>
+        </div>
+
+      <div class="acciones ">
+        <span class="hidden lg:block"></span>
+        <button type="submit" id="btn-continuar" class="btn btn-lg" disabled>Ver planes</button>
+      </div>
+      </form>
+
+      <aside id="resumen" class="card resumen-card hidden lg:block" data-variante="card" aria-label="Resumen de tu seguro"></aside>
+    </div>
+  </main>
+</body>
+</html>

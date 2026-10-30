@@ -1,0 +1,23 @@
+/* css/tokens.css — tokens del diseño (Figma · Componentes y tokens) */
+:root {
+  /* Sobrescribe las variables de Basecoat para que coincidan con el Figma */
+  --primary: #4F46E5;            /* indigo-600 */
+  --primary-foreground: #FFFFFF;
+  --radius: 0.75rem;
+
+  /* Tokens propios del diseño */
+  --primary-700: #3730A3;        /* indigo-800 */
+  --primary-50: #EEF2FF;         /* indigo-50  */
+  --success: #059669;            /* emerald-600 */
+  --error: #DC2626;              /* red-600 */
+  --text: #0F172A;               /* slate-900 */
+  --muted: #64748B;              /* slate-500 */
+  --border: #E2E8F0;             /* slate-200 */
+  --bg: #F5F7FB;                 /* fondo de página */
+
+  /* Variables de Basecoat alineadas a los tokens */
+  --foreground: var(--text);
+  --muted-foreground: var(--muted);
+  --destructive: var(--error);
+  --ring: var(--primary);
+}
